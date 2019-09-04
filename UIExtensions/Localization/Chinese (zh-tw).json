@@ -1,0 +1,253 @@
+{
+  "$id": "1",
+  "Language": "繁體中文",
+  "Version": "1.2.0",
+  "Contributors": "Hsinyu",
+  "HomePage": "https://github.com/hsinyuhcan/KingmakerUIExtensionsMod/blob/master/UIExtensions/Localization/Chinese (zh-tw).json",
+  "Strings": [
+    {
+      "Key": "Menu_Tab_MainFeature",
+      "Value": "主要功能"
+    },
+    {
+      "Key": "Menu_Btn_ResetSettings",
+      "Value": "重設設定"
+    },
+    {
+      "Key": "Menu_Sub_GroupBar",
+      "Value": "隊伍列"
+    },
+    {
+      "Key": "Menu_Opt_AlwaysDisplayPetsPortrait",
+      "Value": "總是顯示寵物的肖像"
+    },
+    {
+      "Key": "Menu_Opt_AlwaysDisplayHpText",
+      "Value": "總是顯示生命值文字"
+    },
+    {
+      "Key": "Menu_Opt_DisplayPetsHpTextOnMastersPortrait",
+      "Value": "將寵物的生命值文字顯示在主人的肖像上"
+    },
+    {
+      "Key": "Menu_Opt_DisplayPetsHpBarOnMastersPortraitLeft",
+      "Value": "將寵物的生命值血條顯示在主人的肖像左側"
+    },
+    {
+      "Key": "Menu_Opt_DisplayPetsHpBarOnMastersPortraitRight",
+      "Value": "將寵物的生命值血條顯示在主人的肖像右側"
+    },
+    {
+      "Key": "Menu_Sub_PlayerInfomation",
+      "Value": "戰鬥中隊伍訊息"
+    },
+    {
+      "Key": "Menu_Opt_OverridePlayerInfomation",
+      "Value": "用以下設定複寫遊戲設定"
+    },
+    {
+      "Key": "Menu_Opt_ShowNamesForParty",
+      "Value": "顯示隊友的名稱"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyHP",
+      "Value": "顯示隊友的生命值"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyActions",
+      "Value": "顯示隊友的動作"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyAttackIntentions",
+      "Value": "顯示隊友的攻擊意圖"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyCastIntentions",
+      "Value": "顯示隊友的施法意圖"
+    },
+    {
+      "Key": "Menu_Opt_ShowNumericCooldownParty",
+      "Value": "顯示隊友的冷卻時間"
+    },
+    {
+      "Key": "Menu_Sub_EnemyInfomation",
+      "Value": "戰鬥中敵人訊息"
+    },
+    {
+      "Key": "Menu_Opt_OverrideEnemyInfomation",
+      "Value": "用以下設定複寫遊戲設定"
+    },
+    {
+      "Key": "Menu_Opt_ShowNamesForEnemies",
+      "Value": "顯示隊友的名稱"
+    },
+    {
+      "Key": "Menu_Opt_ShowEnemyHP",
+      "Value": "顯示敵人的生命值"
+    },
+    {
+      "Key": "Menu_Opt_ShowEnemyActions",
+      "Value": "顯示敵人的動作"
+    },
+    {
+      "Key": "Menu_Opt_ShowEnemyIntentions",
+      "Value": "顯示敵人的意圖"
+    },
+    {
+      "Key": "Menu_Opt_ShowNumericCooldownEnemies",
+      "Value": "顯示敵人的冷卻時間"
+    },
+    {
+      "Key": "Menu_Btn_None",
+      "Value": "無"
+    },
+    {
+      "Key": "Menu_Btn_Never",
+      "Value": "從不"
+    },
+    {
+      "Key": "Menu_Btn_Idleness",
+      "Value": "閒置時"
+    },
+    {
+      "Key": "Menu_Btn_InteractionPlayer",
+      "Value": "選中"
+    },
+    {
+      "Key": "Menu_Btn_InteractionEnemy",
+      "Value": "鼠標懸停"
+    },
+    {
+      "Key": "Menu_Btn_ForcedShow",
+      "Value": "高亮熱鍵"
+    },
+    {
+      "Key": "Menu_Btn_OnPause",
+      "Value": "暫停"
+    },
+    {
+      "Key": "Menu_Btn_Always",
+      "Value": "總是"
+    },
+    {
+      "Key": "Menu_Sub_Intentions",
+      "Value": "意圖"
+    },
+    {
+      "Key": "Menu_Opt_CanShowWhenNotHovering",
+      "Value": "可以在鼠標沒有懸停時顯示意圖"
+    },
+    {
+      "Key": "Menu_Cmt_CanShowWhenNotHovering",
+      "Value": " (在基礎遊戲中攻擊線只能在鼠標懸停時顯示，無視遊戲設定)"
+    },
+    {
+      "Key": "Menu_Opt_CanShowWhenNotPausing",
+      "Value": "可以在遊戲沒有暫停時顯示意圖"
+    },
+    {
+      "Key": "Menu_Cmt_CanShowWhenNotPausing",
+      "Value": " (在基礎遊戲中攻擊線只能在遊戲暫停時顯示，無視遊戲設定)"
+    },
+    {
+      "Key": "Menu_Sub_UIScale",
+      "Value": "介面縮放"
+    },
+    {
+      "Key": "Menu_Opt_UIScaleModifier",
+      "Value": "總體調整: {0:f2} 倍"
+    },
+    {
+      "Key": "Menu_Sub_Hotkey",
+      "Value": "熱鍵"
+    },
+    {
+      "Key": "Menu_Btn_Set",
+      "Value": "設定"
+    },
+    {
+      "Key": "Menu_Btn_Clear",
+      "Value": "清除"
+    },
+    {
+      "Key": "Menu_Txt_Duplicated",
+      "Value": "重複!!"
+    },
+    {
+      "Key": "Menu_Tab_Language",
+      "Value": "語言"
+    },
+    {
+      "Key": "Menu_Sub_Current",
+      "Value": "當前"
+    },
+    {
+      "Key": "Menu_Txt_Language",
+      "Value": "語言: {0}"
+    },
+    {
+      "Key": "Menu_Txt_Version",
+      "Value": "版本: {0}"
+    },
+    {
+      "Key": "Menu_Txt_Contributors",
+      "Value": "貢獻: {0}"
+    },
+    {
+      "Key": "Menu_Txt_HomePage",
+      "Value": "網頁:"
+    },
+    {
+      "Key": "Menu_Btn_Export",
+      "Value": "匯出: {0}"
+    },
+    {
+      "Key": "Menu_Btn_SortAndExport",
+      "Value": "排序並匯出: {0}"
+    },
+    {
+      "Key": "Menu_Cmt_SortAndExport",
+      "Value": " (警告: 同時會刪除所有未使用的條目)"
+    },
+    {
+      "Key": "Menu_Txt_FaildToExport",
+      "Value": "匯出失敗: {0}"
+    },
+    {
+      "Key": "Menu_Sub_Import",
+      "Value": "匯入"
+    },
+    {
+      "Key": "Menu_Btn_RefreshFileList",
+      "Value": "更新檔案列表"
+    },
+    {
+      "Key": "Menu_Btn_DefaultLanguage",
+      "Value": "預設語言"
+    },
+    {
+      "Key": "Menu_Txt_FaildToImport",
+      "Value": "匯入失敗: {0}"
+    },
+    {
+      "Key": "Hotkey_Toggle_HUD",
+      "Value": "切換顯示 / 隱藏遊戲介面"
+    },
+    {
+      "Key": "Hotkey_Toggle_Player_Info",
+      "Value": "切換複寫隊伍訊息設定"
+    },
+    {
+      "Key": "Hotkey_Toggle_Enemy_Info",
+      "Value": "切換複寫敵人訊息設定"
+    },
+    {
+      "Key": "Hotkey_Toggle_Stealth",
+      "Value": "切換隱匿"
+    },
+    {
+      "Key": "Hotkey_Toggle_AI",
+      "Value": "切換 AI"
+    }
+  ]
+}

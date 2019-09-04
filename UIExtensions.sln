@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIExtensions", "UIExtensions\UIExtensions.csproj", "{550404D9-DFD7-44CA-B786-DA4A40D3D32B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ModMaker", "..\KingmakerModMaker\ModMaker\ModMaker.shproj", "{7D3F9428-C134-47FE-9D04-305B4D330401}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\KingmakerModMaker\ModMaker\ModMaker.projitems*{550404d9-dfd7-44ca-b786-da4a40d3d32b}*SharedItemsImports = 4
+		..\KingmakerModMaker\ModMaker\ModMaker.projitems*{7d3f9428-c134-47fe-9d04-305b4d330401}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{550404D9-DFD7-44CA-B786-DA4A40D3D32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550404D9-DFD7-44CA-B786-DA4A40D3D32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550404D9-DFD7-44CA-B786-DA4A40D3D32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550404D9-DFD7-44CA-B786-DA4A40D3D32B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CD9BD3D-4040-4DB9-955C-E1D8757D72E0}
+	EndGlobalSection
+EndGlobal

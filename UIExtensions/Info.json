@@ -1,0 +1,10 @@
+{
+  "Id": "UIExtensions",
+  "DisplayName": "UI Extensions",
+  "Author": "Hsinyu",
+  "Version": "1.2.0",
+  "ManagerVersion": "0.14.1",
+  "EntryMethod": "UIExtensions.Main.Load",
+  "HomePage": "https://www.nexusmods.com/pathfinderkingmaker/mods/99",
+  "Repository": "https://raw.githubusercontent.com/hsinyuhcan/KingmakerUIExtensionsMod/master/UIExtensions/Repository.json"
+}

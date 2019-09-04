@@ -1,0 +1,32 @@
+﻿Version 1.2.0
+	Changed mod name from "Show My Pets" to "UI Extensions"
+	Added options to override the settings of units information in combat and hotkeys for toggling
+	Added options to fix the visual lines of units intentions
+	Added an option to scale UI size
+	Added a hotkey to hide / restore HUD
+	Added a hotkey to toggle stealth
+	Added a hotkey to toggle AI
+	Added background for pets hp bar
+	Fixed pets hp text isn't updated instantly
+	Fixed a vanilla bug that the game could duplicately bind a hotkey to character slots multiple times
+
+Version 1.1.5
+	Fixed the compatibility with 2.0.0m
+
+Version 1.1.4
+	Fixed some codes that does not affect users
+
+Version 1.1.3
+	Decreased the UMM version requirement to 0.14.1
+
+Version 1.1.2
+	Fixed a bug causing the UI broken when the mod is disabled from the setting menu
+
+Version 1.1.1
+	Added an option to display the pets HP bar on their master's portrait
+
+Version 1.1.0
+	Added an option to display the pets HP text on their master's portrait
+	Fixed bugs on drag portraits
+	Fixed a bug that the navigation block isn't refreshed
+	Fixed a bug that causing all characters to be highlighted
