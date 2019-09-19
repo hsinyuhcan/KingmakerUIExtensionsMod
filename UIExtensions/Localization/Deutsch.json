@@ -1,0 +1,253 @@
+{
+  "$id": "1",
+  "Language": "Deutsch",
+  "Version": "1.0.0",
+  "Contributors": "michalnh",
+  "HomePage": "1887er@arcor.de",
+  "Strings": [
+    {
+      "Key": "Menu_Tab_MainFeature",
+      "Value": "Haupteigenschaft"
+    },
+    {
+      "Key": "Menu_Btn_ResetSettings",
+      "Value": "Einstellungen zurücksetzen"
+    },
+    {
+      "Key": "Menu_Sub_GroupBar",
+      "Value": "Gruppenleiste"
+    },
+    {
+      "Key": "Menu_Opt_AlwaysDisplayPetsPortrait",
+      "Value": "Tierbegleiter Portrait immer anzeigen"
+    },
+    {
+      "Key": "Menu_Opt_AlwaysDisplayHpText",
+      "Value": "LP Text immer anzeigen"
+    },
+    {
+      "Key": "Menu_Opt_DisplayPetsHpTextOnMastersPortrait",
+      "Value": "Zeige Tierbegleiter LP Text auf Meister Portrait"
+    },
+    {
+      "Key": "Menu_Opt_DisplayPetsHpBarOnMastersPortraitLeft",
+      "Value": "Zeige Tierbegleiter LP Leiste auf Meister Portrait (links)"
+    },
+    {
+      "Key": "Menu_Opt_DisplayPetsHpBarOnMastersPortraitRight",
+      "Value": "Zeige Tierbegleiter LP Leiste auf Meister Portrait (rechts)"
+    },
+    {
+      "Key": "Menu_Sub_PlayerInfomation",
+      "Value": "Gruppeninformationen im Kampf"
+    },
+    {
+      "Key": "Menu_Opt_OverridePlayerInfomation",
+      "Value": "Überschreibe Basis Spieleinstellungen und benutze dabei folgende Einstellungen"
+    },
+    {
+      "Key": "Menu_Opt_ShowNamesForParty",
+      "Value": "Zeige Gruppenmitgliedernamen"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyHP",
+      "Value": "Zeige Gruppenmitglieder LP"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyActions",
+      "Value": "Zeige Gruppenmitglieder Aktion"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyAttackIntentions",
+      "Value": "Zeige Angriffsabsichten von Gruppenmitgliedern"
+    },
+    {
+      "Key": "Menu_Opt_ShowPartyCastIntentions",
+      "Value": "Zeige Zauberwirkenabsichten von Gruppenmitgliedern"
+    },
+    {
+      "Key": "Menu_Opt_ShowNumericCooldownParty",
+      "Value": "Zeige Abklingzeit für Gruppenmitglieder"
+    },
+    {
+      "Key": "Menu_Sub_EnemyInfomation",
+      "Value": "Gegner Informationen im Kampf"
+    },
+    {
+      "Key": "Menu_Opt_OverrideEnemyInfomation",
+      "Value": "Überschreibe Basis Spieleinstellungen und benutze dabei folgende Einstellungen"
+    },
+    {
+      "Key": "Menu_Opt_ShowNamesForEnemies",
+      "Value": "Zeige Gegner Namen"
+    },
+    {
+      "Key": "Menu_Opt_ShowEnemyHP",
+      "Value": "Zeige Gegner LP"
+    },
+    {
+      "Key": "Menu_Opt_ShowEnemyActions",
+      "Value": "Zeige Gegner Aktionen"
+    },
+    {
+      "Key": "Menu_Opt_ShowEnemyIntentions",
+      "Value": "Zeige Gegner Absichten"
+    },
+    {
+      "Key": "Menu_Opt_ShowNumericCooldownEnemies",
+      "Value": "Zeige Abklingzeit für Gegner"
+    },
+    {
+      "Key": "Menu_Btn_None",
+      "Value": "Nicht"
+    },
+    {
+      "Key": "Menu_Btn_Never",
+      "Value": "Nie"
+    },
+    {
+      "Key": "Menu_Btn_Idleness",
+      "Value": "Wenn untätig"
+    },
+    {
+      "Key": "Menu_Btn_InteractionPlayer",
+      "Value": "Bei Auswahl"
+    },
+    {
+      "Key": "Menu_Btn_InteractionEnemy",
+      "Value": "Bei Mausdrüber"
+    },
+    {
+      "Key": "Menu_Btn_ForcedShow",
+      "Value": "Bei Schnellauswahltaste"
+    },
+    {
+      "Key": "Menu_Btn_OnPause",
+      "Value": "In Pause"
+    },
+    {
+      "Key": "Menu_Btn_Always",
+      "Value": "Immer"
+    },
+    {
+      "Key": "Menu_Sub_Intentions",
+      "Value": "Absichten"
+    },
+    {
+      "Key": "Menu_Opt_CanShowWhenNotHovering",
+      "Value": "Zeige Einheiten Absichten wenn nicht Mausdrüber"
+    },
+    {
+      "Key": "Menu_Cmt_CanShowWhenNotHovering",
+      "Value": " (Im Basisspiel können die Attacklinien nur bei Mausdrüber angezeigt werden, egal welche Einstellungen)"
+    },
+    {
+      "Key": "Menu_Opt_CanShowWhenNotPausing",
+      "Value": "Zeige Einheiten Absichten wenn nicht pausiert"
+    },
+    {
+      "Key": "Menu_Cmt_CanShowWhenNotPausing",
+      "Value": " (Im Basisspiel können die Attacklinien nur bei Pause angezeigt werden, egal welche Einstellungen)"
+    },
+    {
+      "Key": "Menu_Sub_UIScale",
+      "Value": "UI Maßstab"
+    },
+    {
+      "Key": "Menu_Opt_UIScaleModifier",
+      "Value": "Modifikator insgesamt: {0:f2}x"
+    },
+    {
+      "Key": "Menu_Sub_Hotkey",
+      "Value": "Schnelltaste"
+    },
+    {
+      "Key": "Menu_Btn_Set",
+      "Value": "Setze"
+    },
+    {
+      "Key": "Menu_Btn_Clear",
+      "Value": "Leeren"
+    },
+    {
+      "Key": "Menu_Txt_Duplicated",
+      "Value": "Duplikat!!"
+    },
+    {
+      "Key": "Menu_Tab_Language",
+      "Value": "Sprache"
+    },
+    {
+      "Key": "Menu_Sub_Current",
+      "Value": "Aktuell"
+    },
+    {
+      "Key": "Menu_Txt_Language",
+      "Value": "Sprache: {0}"
+    },
+    {
+      "Key": "Menu_Txt_Version",
+      "Value": "Version: {0}"
+    },
+    {
+      "Key": "Menu_Txt_Contributors",
+      "Value": "Mitwirkender: {0}"
+    },
+    {
+      "Key": "Menu_Txt_HomePage",
+      "Value": "Startseite:"
+    },
+    {
+      "Key": "Menu_Btn_Export",
+      "Value": "Exportieren: {0}"
+    },
+    {
+      "Key": "Menu_Btn_SortAndExport",
+      "Value": "Sortieren und exportieren: {0}"
+    },
+    {
+      "Key": "Menu_Cmt_SortAndExport",
+      "Value": " (Warnung: alle unbenutzen Einträge werden auch gelöscht)"
+    },
+    {
+      "Key": "Menu_Txt_FaildToExport",
+      "Value": "Fehlerhafter Export: {0}"
+    },
+    {
+      "Key": "Menu_Sub_Import",
+      "Value": "Import"
+    },
+    {
+      "Key": "Menu_Btn_RefreshFileList",
+      "Value": "Dateiliste aktualisieren"
+    },
+    {
+      "Key": "Menu_Btn_DefaultLanguage",
+      "Value": "Standard Sprache"
+    },
+    {
+      "Key": "Menu_Txt_FaildToImport",
+      "Value": "Fehlerhafter Import: {0}"
+    },
+    {
+      "Key": "Hotkey_Toggle_HUD",
+      "Value": "Wechsel ein- / ausblenden HUD"
+    },
+    {
+      "Key": "Hotkey_Toggle_Player_Info",
+      "Value": "Wechsel überschreibe Gruppen Info Einstellungen"
+    },
+    {
+      "Key": "Hotkey_Toggle_Enemy_Info",
+      "Value": "Wechsel überschreibe Gegner Info Einstellungen"
+    },
+    {
+      "Key": "Hotkey_Toggle_Stealth",
+      "Value": "Wechsel Schleichen"
+    },
+    {
+      "Key": "Hotkey_Toggle_AI",
+      "Value": "Wechsel KI"
+    }
+  ]
+}
