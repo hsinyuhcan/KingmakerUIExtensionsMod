@@ -43,6 +43,7 @@
     <Compile Include="Features\DisplayPetsHpBarOnMastersPortrait.cs" />
     <Compile Include="Features\Intentions.cs" />
     <Compile Include="Features\OverrideInformation.cs" />
+    <Compile Include="Features\ChangePositionOfInspector.cs" />
     <Compile Include="Features\UIScale.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Core.cs" />

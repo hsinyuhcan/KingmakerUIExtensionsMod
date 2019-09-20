@@ -16,8 +16,9 @@ namespace UIExtensions
         public bool toggleDisplayPetsHpBarOnMastersPortraitLeft;
         public bool toggleDisplayPetsHpBarOnMastersPortraitRight = true;
 
-        // ui scale
-        public float uiScaleModifier = 1f;
+        // inspector
+        public bool toggleChangePositionOfInspectorLeft;
+        public bool toggleChangePositionOfInspectorTurnBased;
 
         // override information in combat
         public bool toggleOverrideInfoForPlayer;
@@ -38,6 +39,9 @@ namespace UIExtensions
         // intentions
         public bool toggleCanShowIntentionsWhenNotHovering = true;
         public bool toggleCanShowIntentionsWhenNotPausing = true;
+
+        // ui scale
+        public float uiScaleModifier = 1f;
 
         // hotkeys
         public SerializableDictionary<string, BindingKeysData> hotkeys = new SerializableDictionary<string, BindingKeysData>();

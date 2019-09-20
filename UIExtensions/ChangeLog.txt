@@ -1,4 +1,5 @@
 ﻿Version 1.2.1
+	Added an option to change the position of the inspector
 	Added Deutsch translation
 
 Version 1.2.0
