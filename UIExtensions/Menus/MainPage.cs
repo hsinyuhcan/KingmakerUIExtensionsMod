@@ -209,7 +209,7 @@ namespace UIExtensions.Menus
         {
             using (new GUILayout.HorizontalScope())
             {
-                GUIHelper.ToggleButton(true,
+                GUIHelper.ToggleButton(UIScale.Modifier != 1f,
                    string.Format(Local["Menu_Opt_UIScaleModifier"], UIScale.Modifier), _labelStyle, GUILayout.ExpandWidth(false));
                 UIScale.Modifier =
                     GUIHelper.RoundedHorizontalSlider(UIScale.Modifier, 2, 0.75f, 1.25f, GUILayout.Width(100f), GUILayout.ExpandWidth(false));

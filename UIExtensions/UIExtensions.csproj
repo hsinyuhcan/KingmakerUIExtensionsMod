@@ -116,6 +116,7 @@
   <ItemGroup>
     <Content Include="ChangeLog.txt" />
     <None Include="Localization\Chinese %28zh-tw%29.json" />
+    <None Include="Localization\Deutsch.json" />
     <None Include="Repository.json" />
   </ItemGroup>
   <Import Project="..\..\KingmakerModMaker\ModMaker\ModMaker.projitems" Label="Shared" />
