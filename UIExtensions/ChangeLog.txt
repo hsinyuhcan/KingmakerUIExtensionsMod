@@ -1,4 +1,8 @@
-﻿Version 1.2.0
+﻿Version 1.2.1
+	Added an option to change the position of the inspector
+	Added Deutsch translation
+
+Version 1.2.0
 	Changed mod name from "Show My Pets" to "UI Extensions"
 	Added options to override the settings of units information in combat and hotkeys for toggling
 	Added options to fix the visual lines of units intentions
@@ -6,6 +10,7 @@
 	Added a hotkey to hide / restore HUD
 	Added a hotkey to toggle stealth
 	Added a hotkey to toggle AI
+	Added localization support
 	Added background for pets hp bar
 	Fixed pets hp text isn't updated instantly
 	Fixed a vanilla bug that the game could duplicately bind a hotkey to character slots multiple times

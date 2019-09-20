@@ -43,6 +43,7 @@
     <Compile Include="Features\DisplayPetsHpBarOnMastersPortrait.cs" />
     <Compile Include="Features\Intentions.cs" />
     <Compile Include="Features\OverrideInformation.cs" />
+    <Compile Include="Features\ChangePositionOfInspector.cs" />
     <Compile Include="Features\UIScale.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Core.cs" />
@@ -116,6 +117,7 @@
   <ItemGroup>
     <Content Include="ChangeLog.txt" />
     <None Include="Localization\Chinese %28zh-tw%29.json" />
+    <None Include="Localization\Deutsch.json" />
     <None Include="Repository.json" />
   </ItemGroup>
   <Import Project="..\..\KingmakerModMaker\ModMaker\ModMaker.projitems" Label="Shared" />

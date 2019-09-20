@@ -1,6 +1,7 @@
 ﻿using Kingmaker.UI.SettingsUI;
 using ModMaker;
 using ModMaker.Utility;
+using System;
 using System.Collections.Generic;
 using UIExtensions.Features;
 using UnityEngine;
@@ -56,6 +57,9 @@ namespace UIExtensions.Menus
             using (new GUISubScope(Local["Menu_Sub_GroupBar"]))
                 OnGUIGroupBar();
 
+            using (new GUISubScope(Local["Menu_Sub_Inspector"]))
+                OnGUIInspector();
+
             using (new GUISubScope(Local["Menu_Sub_PlayerInfomation"]))
                 OnGUIPlayerInfomation();
 
@@ -93,6 +97,27 @@ namespace UIExtensions.Menus
             DisplayPetsHpBarOnMastersPortrait.RightToggle =
                 GUIHelper.ToggleButton(DisplayPetsHpBarOnMastersPortrait.RightToggle,
                 Local["Menu_Opt_DisplayPetsHpBarOnMastersPortraitRight"], _buttonStyle, GUILayout.ExpandWidth(false));
+        }
+
+        private void OnGUIInspector()
+        {
+            using (new GUILayout.HorizontalScope())
+            {
+                GUIHelper.ToggleButton(ChangePositionOfInspector.LeftToggle || ChangePositionOfInspector.TurnBasedToggle,
+                  string.Format(Local["Menu_Opt_ChangePositionOfInspector"], UIScale.Modifier), _labelStyle, GUILayout.ExpandWidth(false));
+                Button(Local["Menu_Btn_ChangePositionOfInspectorLeft"], ChangePositionOfInspector.LeftToggle, 
+                    () => ChangePositionOfInspector.LeftToggle = !ChangePositionOfInspector.LeftToggle);
+                Button(Local["Menu_Btn_ChangePositionOfInspectorTurnBased"], ChangePositionOfInspector.TurnBasedToggle,
+                    () => ChangePositionOfInspector.TurnBasedToggle = !ChangePositionOfInspector.TurnBasedToggle);
+
+                void Button(string text, bool isPressed, Action onClick)
+                {
+                    if (GUILayout.Button(text, isPressed ? _downButtonStyle : _buttonStyle, GUILayout.ExpandWidth(false)))
+                    {
+                        onClick();
+                    }
+                }
+            }
         }
 
         private void OnGUIPlayerInfomation()
@@ -209,7 +234,7 @@ namespace UIExtensions.Menus
         {
             using (new GUILayout.HorizontalScope())
             {
-                GUIHelper.ToggleButton(true,
+                GUIHelper.ToggleButton(UIScale.Modifier != 1f,
                    string.Format(Local["Menu_Opt_UIScaleModifier"], UIScale.Modifier), _labelStyle, GUILayout.ExpandWidth(false));
                 UIScale.Modifier =
                     GUIHelper.RoundedHorizontalSlider(UIScale.Modifier, 2, 0.75f, 1.25f, GUILayout.Width(100f), GUILayout.ExpandWidth(false));

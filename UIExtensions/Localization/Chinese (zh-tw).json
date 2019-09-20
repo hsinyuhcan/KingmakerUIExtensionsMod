@@ -38,6 +38,22 @@
       "Value": "將寵物的生命值血條顯示在主人的肖像右側"
     },
     {
+      "Key": "Menu_Sub_Inspector",
+      "Value": "查看視窗"
+    },
+    {
+      "Key": "Menu_Opt_ChangePositionOfInspector",
+      "Value": "改變查看視窗的位置"
+    },
+    {
+      "Key": "Menu_Btn_ChangePositionOfInspectorLeft",
+      "Value": "到擴充行動欄的旁邊"
+    },
+    {
+      "Key": "Menu_Btn_ChangePositionOfInspectorTurnBased",
+      "Value": "到回合制戰鬥追蹤器的旁邊"
+    },
+    {
       "Key": "Menu_Sub_PlayerInfomation",
       "Value": "戰鬥中隊伍訊息"
     },
