@@ -143,13 +143,13 @@ namespace UIExtensions.Features
                 // return ForceHotkeyPressed || ObjectIsHovered || IsPaused || IsSingleSelected;
                 // ---------------- after  2 ----------------
                 // return IsPaused;
-                List<CodeInstruction> findingCodes_1 = new List<CodeInstruction>
+                CodeInstruction[] findingCodes_1 = new CodeInstruction[]
                 {
                     new CodeInstruction(OpCodes.Ldarg_0),
                     new CodeInstruction(OpCodes.Call,
                         GetPropertyInfo<UIDecal, bool>(nameof(UIDecal.IsPaused)).GetGetMethod(true))
                 };
-                List<CodeInstruction> findingCodes_2 = new List<CodeInstruction>
+                CodeInstruction[] findingCodes_2 = new CodeInstruction[]
                 {
                     new CodeInstruction(OpCodes.Ldarg_0),
                     new CodeInstruction(OpCodes.Ldfld,
@@ -161,10 +161,10 @@ namespace UIExtensions.Features
                     new CodeInstruction(OpCodes.Brtrue)
                 };
                 int startIndex_1 = codes.FindCodes(findingCodes_1);
-                int startIndex_2 = codes.FindCodes(startIndex_1 + findingCodes_1.Count, findingCodes_2);
+                int startIndex_2 = codes.FindCodes(startIndex_1 + findingCodes_1.Length, findingCodes_2);
                 if (startIndex_1 >= 0 && startIndex_2 >= 0)
                 {
-                    List<CodeInstruction> patchingCodes_2 = new List<CodeInstruction>()
+                    CodeInstruction[] patchingCodes_2 = new CodeInstruction[]
                     {
                         new CodeInstruction(OpCodes.Ldarg_0),
                         new CodeInstruction(OpCodes.Call,
@@ -172,8 +172,8 @@ namespace UIExtensions.Features
                         new CodeInstruction(OpCodes.Ret),
                     };
                     return codes
-                        .ReplaceRange(startIndex_2, findingCodes_2.Count, patchingCodes_2,true)
-                        .Insert(startIndex_1 + findingCodes_1.Count, new CodeInstruction(OpCodes.Call,
+                        .ReplaceRange(startIndex_2, findingCodes_2.Length, patchingCodes_2,true)
+                        .Insert(startIndex_1 + findingCodes_1.Length, new CodeInstruction(OpCodes.Call,
                             new Func<bool, bool>(IsPausedPostGetter).Method), false)
                         .Complete();
                 }

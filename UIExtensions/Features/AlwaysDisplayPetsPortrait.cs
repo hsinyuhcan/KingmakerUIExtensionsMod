@@ -131,7 +131,7 @@ namespace UIExtensions.Features
                 // FullScreenEnabled
                 // ---------------- after  ----------------
                 // IsEnabled() || FullScreenEnabled
-                List<CodeInstruction> findingCodes = new List<CodeInstruction>
+                CodeInstruction[] findingCodes = new CodeInstruction[]
                 {
                     new CodeInstruction(OpCodes.Ldarg_0),
                     new CodeInstruction(OpCodes.Call,
@@ -141,7 +141,7 @@ namespace UIExtensions.Features
                 int startIndex = codes.FindCodes(findingCodes);
                 if (startIndex >= 0)
                 {
-                    List<CodeInstruction> patchingCodes = new List<CodeInstruction>()
+                    CodeInstruction[] patchingCodes = new CodeInstruction[]
                     {
                         new CodeInstruction(OpCodes.Call,
                             new Func<bool>(IsEnabled).Method),
