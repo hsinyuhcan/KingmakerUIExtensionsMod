@@ -105,7 +105,8 @@ namespace UIExtensions.Features
                 }
                 else
                 {
-                    throw new Exception($"Failed to patch '{MethodBase.GetCurrentMethod().DeclaringType}'");
+                    Core.FailedToPatch(MethodBase.GetCurrentMethod());
+                    return codes;
                 }
             }
         }
@@ -146,7 +147,8 @@ namespace UIExtensions.Features
                 }
                 else
                 {
-                    throw new Exception($"Failed to patch '{MethodBase.GetCurrentMethod().DeclaringType}'");
+                    Core.FailedToPatch(MethodBase.GetCurrentMethod());
+                    return codes;
                 }
             }
         }
