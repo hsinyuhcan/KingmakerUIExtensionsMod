@@ -89,6 +89,22 @@ namespace UIExtensions.Features
                 }
             }
         }
+        
+        // fix an error which happens on exit the game (or load a save) in combat
+        [HarmonyPatch(typeof(UIDecal), nameof(UIDecal.IsEnemy), MethodType.Getter)]
+        static class UIDecal_IsEnemy_Patch
+        {
+            [HarmonyPrefix]
+            static bool Prefix(UIDecal __instance, ref bool __result)
+            {
+                if (Mod.Enabled && CanShowWhenNotHovering)
+                {
+                    __result = __instance.Unit.IsPlayersEnemy;
+                    return false;
+                }
+                return true;
+            }
+        }
 
         // it's useless
         [HarmonyPatch(typeof(UIDecal), "ShowAdditionalLine", typeof(UnitEntityData))]
