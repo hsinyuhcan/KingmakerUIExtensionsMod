@@ -85,7 +85,7 @@ namespace UIExtensions.Features
                 // IsMouseOver
                 // ---------------- after  ----------------
                 // IsEnabled() || IsMouseOver
-                List<CodeInstruction> findingCodes = new List<CodeInstruction>
+                CodeInstruction[] findingCodes = new CodeInstruction[]
                 {
                     new CodeInstruction(OpCodes.Ldarg_0),
                     new CodeInstruction(OpCodes.Call, 
@@ -95,7 +95,7 @@ namespace UIExtensions.Features
                 int startIndex = codes.FindCodes(findingCodes);
                 if (startIndex >= 0)
                 {
-                    List<CodeInstruction> patchingCodes = new List<CodeInstruction>()
+                    CodeInstruction[] patchingCodes = new CodeInstruction[]
                     {
                         new CodeInstruction(OpCodes.Call, 
                             new Func<bool>(IsEnabled).Method),
@@ -105,7 +105,8 @@ namespace UIExtensions.Features
                 }
                 else
                 {
-                    throw new Exception($"Failed to patch '{MethodBase.GetCurrentMethod().DeclaringType}'");
+                    Core.FailedToPatch(MethodBase.GetCurrentMethod());
+                    return codes;
                 }
             }
         }
@@ -121,7 +122,7 @@ namespace UIExtensions.Features
                 // ----------------after----------------
                 // if (!IsEnabled())
                 //     HitPointsContainer.DOFade(0f, 0.1f).SetUpdate(true);
-                List<CodeInstruction> findingCodes = new List<CodeInstruction>
+                CodeInstruction[] findingCodes = new CodeInstruction[]
                 {
                     new CodeInstruction(OpCodes.Ldarg_0),
                     new CodeInstruction(OpCodes.Ldfld,
@@ -136,17 +137,18 @@ namespace UIExtensions.Features
                 int startIndex = codes.FindCodes(findingCodes);
                 if (startIndex >= 0)
                 {
-                    List<CodeInstruction> patchingCodes = new List<CodeInstruction>()
+                    CodeInstruction[] patchingCodes = new CodeInstruction[]
                     {
                         new CodeInstruction(OpCodes.Call, 
                             new Func<bool>(IsEnabled).Method),
-                        new CodeInstruction(OpCodes.Brtrue, codes.NewLabel(startIndex + findingCodes.Count, il))
+                        new CodeInstruction(OpCodes.Brtrue, codes.NewLabel(startIndex + findingCodes.Length, il))
                     };
                     return codes.InsertRange(startIndex, patchingCodes, true).Complete();
                 }
                 else
                 {
-                    throw new Exception($"Failed to patch '{MethodBase.GetCurrentMethod().DeclaringType}'");
+                    Core.FailedToPatch(MethodBase.GetCurrentMethod());
+                    return codes;
                 }
             }
         }

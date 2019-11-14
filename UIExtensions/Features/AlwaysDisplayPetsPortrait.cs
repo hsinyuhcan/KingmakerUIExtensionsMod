@@ -7,11 +7,16 @@ using Kingmaker.PubSubSystem;
 using Kingmaker.UI.Common;
 using Kingmaker.UI.Group;
 using ModMaker;
+using ModMaker.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using UIExtensions.Utility;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using static ModMaker.Utility.ReflectionCache;
 using static UIExtensions.Main;
 
 namespace UIExtensions.Features
@@ -111,6 +116,43 @@ namespace UIExtensions.Features
                     Mod.Debug(MethodBase.GetCurrentMethod());
 
                     UpdateNaviBlock();
+                }
+            }
+        }
+
+        // fix it's unable to scroll the portraits with the mouse wheel in combat
+        [HarmonyPatch(typeof(GroupController), nameof(GroupController.OnScroll), typeof(PointerEventData))]
+        static class GroupController_OnScroll_Patch
+        {
+            [HarmonyTranspiler]
+            static IEnumerable<CodeInstruction> Transpiler(MethodBase original, IEnumerable<CodeInstruction> codes, ILGenerator il)
+            {
+                // ---------------- before ----------------
+                // FullScreenEnabled
+                // ---------------- after  ----------------
+                // IsEnabled() || FullScreenEnabled
+                CodeInstruction[] findingCodes = new CodeInstruction[]
+                {
+                    new CodeInstruction(OpCodes.Ldarg_0),
+                    new CodeInstruction(OpCodes.Call,
+                        GetPropertyInfo<GroupController, bool>(nameof(GroupController.FullScreenEnabled)).GetGetMethod(true)),
+                    new CodeInstruction(OpCodes.Brtrue)
+                };
+                int startIndex = codes.FindCodes(findingCodes);
+                if (startIndex >= 0)
+                {
+                    CodeInstruction[] patchingCodes = new CodeInstruction[]
+                    {
+                        new CodeInstruction(OpCodes.Call,
+                            new Func<bool>(IsEnabled).Method),
+                        new CodeInstruction(OpCodes.Brtrue, codes.Item(startIndex + 2).operand)
+                    };
+                    return codes.InsertRange(startIndex, patchingCodes, true).Complete();
+                }
+                else
+                {
+                    Core.FailedToPatch(MethodBase.GetCurrentMethod());
+                    return codes;
                 }
             }
         }

@@ -26,6 +26,12 @@ namespace UIExtensions
 
         public OverrideInformation Information { get; internal set; }
 
+        public static void FailedToPatch(MethodBase patch)
+        {
+            Type type = patch.DeclaringType;
+            Mod.Warning($"Failed to patch '{type.DeclaringType?.Name}.{type.Name}.{patch.Name}'");
+        }
+
         public void ResetSettings()
         {
             Mod.Debug(MethodBase.GetCurrentMethod());
