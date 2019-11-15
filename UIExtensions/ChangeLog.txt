@@ -1,4 +1,7 @@
-﻿Version 1.2.2
+﻿Version 1.2.3
+	Fixed certain portraits can't be dragged while "display pet's portrait" option is enabled
+
+Version 1.2.2
 	Changed logging warnings instead of stopping loading if the mod fails to patch the game (for compatibility reason)
 	Fixed it's unable to scroll the portraits with the mouse wheel in combat
 	Fixed an inner error which happens on exit the game (or load a save) in combat
