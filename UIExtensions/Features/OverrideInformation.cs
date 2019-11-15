@@ -1,6 +1,7 @@
 ﻿using Harmony12;
 using Kingmaker;
 using Kingmaker.PubSubSystem;
+using Kingmaker.UI.Overtip;
 using Kingmaker.UI.SettingsUI;
 using ModMaker;
 using ModMaker.Utility;
@@ -45,6 +46,17 @@ namespace UIExtensions.Features
                 if (Mod.Settings.overrideShowPartyHP != value)
                 {
                     Mod.Settings.overrideShowPartyHP = value;
+                    Update();
+                }
+            }
+        }
+
+        public static bool? PartyHPIsShort {
+            get => Mod.Settings.overridePartyHPIsShort;
+            set {
+                if (Mod.Settings.overridePartyHPIsShort != value)
+                {
+                    Mod.Settings.overridePartyHPIsShort = value;
                     Update();
                 }
             }
@@ -122,6 +134,17 @@ namespace UIExtensions.Features
                 if (Mod.Settings.overrideShowEnemyHP != value)
                 {
                     Mod.Settings.overrideShowEnemyHP = value;
+                    Update();
+                }
+            }
+        }
+
+        public static bool? EnemiesHPIsShort {
+            get => Mod.Settings.overrideEnemiesHPIsShort;
+            set {
+                if (Mod.Settings.overrideEnemiesHPIsShort != value)
+                {
+                    Mod.Settings.overrideEnemiesHPIsShort = value;
                     Update();
                 }
             }
@@ -264,6 +287,33 @@ namespace UIExtensions.Features
                             __result = result;
                             return false;
                         }
+                    }
+                }
+                return true;
+            }
+        }
+
+        // override settings
+        [HarmonyPatch(typeof(OvertipController), "IsHPShort", MethodType.Getter)]
+        static class OvertipController_get_IsHPShort_Patch
+        {
+            [HarmonyPrefix]
+            static bool Prefix(OvertipController __instance, ref bool __result)
+            {
+                if (Mod.Enabled)
+                {
+                    if (__instance.IsEnemy)
+                    {
+                        if (EnemyToggle && EnemiesHPIsShort.HasValue)
+                        {
+                            __result = EnemiesHPIsShort.Value;
+                            return false;
+                        }
+                    }
+                    else if (PlayerToggle && PartyHPIsShort.HasValue)
+                    {
+                        __result = PartyHPIsShort.Value;
+                        return false;
                     }
                 }
                 return true;

@@ -1,4 +1,5 @@
 ﻿Version 1.2.3
+	Added an option to override the settings of "Show text HP instead on HP bar"
 	Fixed certain portraits can't be dragged while "display pet's portrait" option is enabled
 
 Version 1.2.2

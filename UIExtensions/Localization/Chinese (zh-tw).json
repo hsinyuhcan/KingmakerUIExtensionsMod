@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Language": "繁體中文",
-  "Version": "1.2.0",
+  "Version": "1.2.3",
   "Contributors": "Hsinyu",
   "HomePage": "https://github.com/hsinyuhcan/KingmakerUIExtensionsMod/blob/master/UIExtensions/Localization/Chinese (zh-tw).json",
   "Strings": [
@@ -70,6 +70,10 @@
       "Value": "顯示隊友的生命值"
     },
     {
+      "Key": "Menu_Opt_PartyHPIsShort",
+      "Value": "顯示生命值時以文本代替生命槽"
+    },
+    {
       "Key": "Menu_Opt_ShowPartyActions",
       "Value": "顯示隊友的動作"
     },
@@ -102,6 +106,10 @@
       "Value": "顯示敵人的生命值"
     },
     {
+      "Key": "Menu_Opt_EnemiesHPIsShort",
+      "Value": "顯示生命值時以文本代替生命槽"
+    },
+    {
       "Key": "Menu_Opt_ShowEnemyActions",
       "Value": "顯示敵人的動作"
     },
@@ -116,6 +124,14 @@
     {
       "Key": "Menu_Btn_None",
       "Value": "無"
+    },
+    {
+      "Key": "Menu_Btn_No",
+      "Value": "否"
+    },
+    {
+      "Key": "Menu_Btn_Yes",
+      "Value": "是"
     },
     {
       "Key": "Menu_Btn_Never",

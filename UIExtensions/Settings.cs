@@ -24,6 +24,7 @@ namespace UIExtensions
         public bool toggleOverrideInfoForPlayer;
         public DropdownState overrideShowNamesForParty = DropdownState.Interaction;
         public DropdownState overrideShowPartyHP = DropdownState.Always;
+        public bool? overridePartyHPIsShort = false;
         public DropdownState overrideShowPartyActions = DropdownState.Always;
         public DropdownState overrideShowPartyAttackIntentions = DropdownState.ForcedShow;
         public DropdownState overrideShowPartyCastIntentions = DropdownState.ForcedShow;
@@ -32,6 +33,7 @@ namespace UIExtensions
         public bool toggleOverrideInfoForEnemy;
         public DropdownState overrideShowNamesForEnemies = DropdownState.Interaction;
         public DropdownState overrideShowEnemyHP = DropdownState.Always;
+        public bool? overrideEnemiesHPIsShort = false;
         public DropdownState overrideShowEnemyActions = DropdownState.Always;
         public DropdownState overrideShowEnemyIntentions = DropdownState.ForcedShow;
         public DropdownState overrideShowNumericCooldownEnemies = DropdownState.Always;
