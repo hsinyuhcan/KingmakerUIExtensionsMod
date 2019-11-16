@@ -1,5 +1,6 @@
 ﻿using Harmony12;
 using Kingmaker;
+using Kingmaker.Controllers.MapObjects;
 using Kingmaker.PubSubSystem;
 using Kingmaker.UI.Overtip;
 using Kingmaker.UI.SettingsUI;
@@ -185,8 +186,11 @@ namespace UIExtensions.Features
 
         public static void Update()
         {
-            EventBus.RaiseEvent<IInteractionHighlightUIHandler>
-                (h => h.HandleHighlightChange(Game.Instance.InteractionHighlightController.IsHighlighting));
+            InteractionHighlightController controller = 
+                Game.Instance.InteractionHighlightController ??
+                Game.Instance.GetController<InteractionHighlightController>(true);
+            if (controller != null)
+                EventBus.RaiseEvent<IInteractionHighlightUIHandler>(h => h.HandleHighlightChange(controller.IsHighlighting));
         }
 
         private void HandleTogglePlayer()

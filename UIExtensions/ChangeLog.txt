@@ -1,6 +1,7 @@
 ﻿Version 1.2.3
 	Added an option to override the settings of "Show text HP instead on HP bar"
 	Fixed certain portraits can't be dragged while "display pet's portrait" option is enabled
+	Fixed an inner error thrown by changing certain mod options when inventory or esc menu is opened
 
 Version 1.2.2
 	Changed logging warnings instead of stopping loading if the mod fails to patch the game (for compatibility reason)
