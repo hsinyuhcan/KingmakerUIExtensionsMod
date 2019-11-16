@@ -1,4 +1,5 @@
-﻿using Harmony12;
+﻿using DG.Tweening;
+using Harmony12;
 using Kingmaker.UI.Group;
 using ModMaker;
 using ModMaker.Utility;
@@ -54,7 +55,7 @@ namespace UIExtensions.Features
                     if (isEnabled)
                         portrait.SetHpText();
                     else
-                        portrait.OnPointerExit(null);
+                        portrait.HitPointsContainer.DOFade(0f, 0.1f).SetUpdate(true);
                 }
             }
         }
