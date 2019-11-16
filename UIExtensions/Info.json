@@ -2,7 +2,7 @@
   "Id": "UIExtensions",
   "DisplayName": "UI Extensions",
   "Author": "Hsinyu",
-  "Version": "1.2.2",
+  "Version": "1.2.3",
   "ManagerVersion": "0.14.1",
   "EntryMethod": "UIExtensions.Main.Load",
   "HomePage": "https://www.nexusmods.com/pathfinderkingmaker/mods/99",
