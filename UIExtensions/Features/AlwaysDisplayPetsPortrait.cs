@@ -223,8 +223,8 @@ namespace UIExtensions.Features
                 // check the next unit
                 if (source.Index < 5)
                 {
-                    GroupCharacter targetCharacter =characters.Skip(source.Index + 1).FirstOrDefault(IsValidTarget);
-                    if (sourcePosition.x > targetCharacter.BasePosition.x - halfWidth)
+                    GroupCharacter targetCharacter = characters.Skip(source.Index + 1).FirstOrDefault(IsValidTarget);
+                    if (targetCharacter != null && sourcePosition.x > targetCharacter.BasePosition.x - halfWidth)
                     {
                         return targetCharacter.Unit;
                     }
@@ -234,7 +234,7 @@ namespace UIExtensions.Features
                 if (source.Index > 0)
                 {
                     GroupCharacter targetCharacter = characters.Take(source.Index).LastOrDefault(IsValidTarget);
-                    if (sourcePosition.x < targetCharacter.BasePosition.x + halfWidth)
+                    if (targetCharacter != null && sourcePosition.x < targetCharacter.BasePosition.x + halfWidth)
                     {
                         return targetCharacter.Unit;
                     }
@@ -245,10 +245,10 @@ namespace UIExtensions.Features
 
             static void SwapUnitsIndex(UnitEntityData source, UnitEntityData target)
             {
-                void EnsureNotPet(UnitEntityData unit)
+                void EnsureNotPet(ref UnitEntityData unit)
                     => unit = unit.Descriptor.IsPet ? unit.Descriptor.Master.Value : unit;
-                EnsureNotPet(source);
-                EnsureNotPet(target);
+                EnsureNotPet(ref source);
+                EnsureNotPet(ref target);
 
                 // get index
                 List<UnitReference> characters = Game.Instance.Player.PartyCharacters;

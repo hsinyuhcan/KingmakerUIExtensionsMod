@@ -132,6 +132,7 @@ namespace UIExtensions.Menus
                 {
                     Option(ShowNamesForParty, Local["Menu_Opt_ShowNamesForParty"]);
                     Option(ShowPartyHP, Local["Menu_Opt_ShowPartyHP"]);
+                    GUIHelper.ToggleButton(PartyHPIsShort.HasValue, Local["Menu_Opt_PartyHPIsShort"], _labelStyle, GUILayout.ExpandWidth(false));
                     Option(ShowPartyActions, Local["Menu_Opt_ShowPartyActions"]);
                     Option(ShowPartyAttackIntentions, Local["Menu_Opt_ShowPartyAttackIntentions"]);
                     Option(ShowPartyCastIntentions, Local["Menu_Opt_ShowPartyCastIntentions"]);
@@ -142,6 +143,7 @@ namespace UIExtensions.Menus
                 {
                     ShowNamesForParty = DropdownStateSelection(ShowNamesForParty);
                     ShowPartyHP = DropdownStateSelection(ShowPartyHP);
+                    PartyHPIsShort = BoolSelection(PartyHPIsShort);
                     ShowPartyActions = DropdownStateSelection(ShowPartyActions, false, true);
                     ShowPartyAttackIntentions = DropdownStateSelection(ShowPartyAttackIntentions);
                     ShowPartyCastIntentions = DropdownStateSelection(ShowPartyCastIntentions);
@@ -167,6 +169,7 @@ namespace UIExtensions.Menus
                 {
                     Option(ShowNamesForEnemies, Local["Menu_Opt_ShowNamesForEnemies"]);
                     Option(ShowEnemyHP, Local["Menu_Opt_ShowEnemyHP"]);
+                    GUIHelper.ToggleButton(EnemiesHPIsShort.HasValue, Local["Menu_Opt_EnemiesHPIsShort"], _labelStyle, GUILayout.ExpandWidth(false));
                     Option(ShowEnemyActions, Local["Menu_Opt_ShowEnemyActions"]);
                     Option(ShowEnemyIntentions, Local["Menu_Opt_ShowEnemyIntentions"]);
                     Option(ShowNumericCooldownEnemies, Local["Menu_Opt_ShowNumericCooldownEnemies"]);
@@ -176,6 +179,7 @@ namespace UIExtensions.Menus
                 {
                     ShowNamesForEnemies = DropdownStateSelection(ShowNamesForEnemies, true);
                     ShowEnemyHP = DropdownStateSelection(ShowEnemyHP, true);
+                    EnemiesHPIsShort = BoolSelection(EnemiesHPIsShort);
                     ShowEnemyActions = DropdownStateSelection(ShowEnemyActions, true);
                     ShowEnemyIntentions = DropdownStateSelection(ShowEnemyIntentions, true);
                     ShowNumericCooldownEnemies = DropdownStateSelection(ShowNumericCooldownEnemies, true);
@@ -185,6 +189,28 @@ namespace UIExtensions.Menus
             void Option(DropdownState value, string name)
             {
                 GUIHelper.ToggleButton(value != DropdownState.None, name, _labelStyle, GUILayout.ExpandWidth(false));
+            }
+        }
+
+        private bool? BoolSelection(bool? value)
+        {
+            using (new GUILayout.HorizontalScope())
+            {
+                bool? result = value;
+
+                Button(Local["Menu_Btn_None"], null);
+                Button(Local["Menu_Btn_No"], false);
+                Button(Local["Menu_Btn_Yes"], true);
+
+                void Button(string text, bool? option)
+                {
+                    if (GUILayout.Button(text, value == option ? _downButtonStyle : _buttonStyle, GUILayout.ExpandWidth(false)))
+                    {
+                        result = option;
+                    }
+                }
+
+                return result;
             }
         }
 
